@@ -22,7 +22,6 @@ namespace Tavleya2
         public static Olympic_table ot;
         public static Swiss_table st;
         public static Mixed_table mt;
-
         public delegate void MethodContainer();
         public event MethodContainer onCount;   /// проведена жеребьевка
 
