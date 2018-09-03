@@ -36,6 +36,7 @@
             this.search_btn = new System.Windows.Forms.Button();
             this.Add_to_pl_btn = new System.Windows.Forms.Button();
             this.Add_pl_btn = new System.Windows.Forms.Button();
+            this.del_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // save_btn
@@ -64,7 +65,7 @@
             this.concat_btn.Name = "concat_btn";
             this.concat_btn.Size = new System.Drawing.Size(155, 23);
             this.concat_btn.TabIndex = 2;
-            this.concat_btn.Text = "Дополнить существующий";
+            this.concat_btn.Text = "Обновить существующий";
             this.concat_btn.UseVisualStyleBackColor = true;
             this.concat_btn.Click += new System.EventHandler(this.concat_btn_Click);
             // 
@@ -123,11 +124,22 @@
             this.Add_pl_btn.UseVisualStyleBackColor = true;
             this.Add_pl_btn.Click += new System.EventHandler(this.Add_pl_btn_Click);
             // 
+            // del_button
+            // 
+            this.del_button.Location = new System.Drawing.Point(366, 455);
+            this.del_button.Name = "del_button";
+            this.del_button.Size = new System.Drawing.Size(75, 23);
+            this.del_button.TabIndex = 8;
+            this.del_button.Text = "Удалить";
+            this.del_button.UseVisualStyleBackColor = true;
+            this.del_button.Click += new System.EventHandler(this.del_button_Click);
+            // 
             // Rating_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 487);
+            this.Controls.Add(this.del_button);
             this.Controls.Add(this.Add_pl_btn);
             this.Controls.Add(this.Add_to_pl_btn);
             this.Controls.Add(this.search_btn);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Button search_btn;
         private System.Windows.Forms.Button Add_to_pl_btn;
         private System.Windows.Forms.Button Add_pl_btn;
+        private System.Windows.Forms.Button del_button;
     }
 }

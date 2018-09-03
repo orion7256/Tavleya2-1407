@@ -158,6 +158,16 @@ namespace Tavleya2
             Rlist.AddRange(tvlData.short_players);
             reLoad_data();
         }
+
+        private void del_button_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count > 0)
+            {
+                foreach (int i in listView1.SelectedIndices)
+                    listView1.Items.RemoveAt(i);
+                reLoad_data();
+            }
+        }
     }
     class PlComparer : IEqualityComparer<Short_player>
     {

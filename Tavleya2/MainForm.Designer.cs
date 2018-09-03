@@ -81,6 +81,9 @@ namespace Tavleya2
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Del_button = new System.Windows.Forms.Button();
+            this.up_button = new System.Windows.Forms.Button();
+            this.down_button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tours.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tour_numericUpDown)).BeginInit();
@@ -276,7 +279,6 @@ namespace Tavleya2
             // 
             // System_count_btn
             // 
-            this.System_count_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.System_count_btn.Location = new System.Drawing.Point(89, 15);
             this.System_count_btn.Name = "System_count_btn";
             this.System_count_btn.Size = new System.Drawing.Size(238, 27);
@@ -379,6 +381,9 @@ namespace Tavleya2
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.down_button);
+            this.tabPage1.Controls.Add(this.up_button);
+            this.tabPage1.Controls.Add(this.Del_button);
             this.tabPage1.Controls.Add(this.Gone_button);
             this.tabPage1.Controls.Add(this.Editbutton);
             this.tabPage1.Controls.Add(this.Addbutton);
@@ -450,7 +455,7 @@ namespace Tavleya2
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(782, 495);
+            this.tabPage2.Size = new System.Drawing.Size(761, 495);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Прогресс";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -522,7 +527,7 @@ namespace Tavleya2
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(782, 495);
+            this.tabPage3.Size = new System.Drawing.Size(761, 495);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Сводка";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -575,6 +580,41 @@ namespace Tavleya2
             this.chart2.Size = new System.Drawing.Size(700, 436);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
+            // 
+            // Del_button
+            // 
+            this.Del_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Del_button.Location = new System.Drawing.Point(307, 457);
+            this.Del_button.Name = "Del_button";
+            this.Del_button.Size = new System.Drawing.Size(94, 32);
+            this.Del_button.TabIndex = 6;
+            this.Del_button.Text = "Удалить";
+            this.Del_button.UseVisualStyleBackColor = true;
+            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
+            // 
+            // up_button
+            // 
+            this.up_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.up_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.up_button.Location = new System.Drawing.Point(706, 456);
+            this.up_button.Name = "up_button";
+            this.up_button.Size = new System.Drawing.Size(32, 32);
+            this.up_button.TabIndex = 7;
+            this.up_button.Text = "˄";
+            this.up_button.UseVisualStyleBackColor = true;
+            this.up_button.Click += new System.EventHandler(this.up_button_Click);
+            // 
+            // down_button
+            // 
+            this.down_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.down_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.down_button.Location = new System.Drawing.Point(744, 456);
+            this.down_button.Name = "down_button";
+            this.down_button.Size = new System.Drawing.Size(32, 32);
+            this.down_button.TabIndex = 8;
+            this.down_button.Text = "˅";
+            this.down_button.UseVisualStyleBackColor = true;
+            this.down_button.Click += new System.EventHandler(this.down_button_Click);
             // 
             // MainForm
             // 
@@ -658,6 +698,9 @@ namespace Tavleya2
         private ToolStripMenuItem рейтингЛистToolStripMenuItem;
         private ToolStripMenuItem дополнитьГодовойОтчетToolStripMenuItem;
         private ToolStripMenuItem восстановлениеToolStripMenuItem;
+        private Button down_button;
+        private Button up_button;
+        private Button Del_button;
     }
 }
 

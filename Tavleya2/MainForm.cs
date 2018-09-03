@@ -345,6 +345,7 @@ namespace Tavleya2
                     Tour_numericUpDown.Value = 1;
                 Refresh_playerstable();
                 System_count_btn.Enabled = false;
+                Del_button.Enabled = false;
                 System_count_btn.Visible = false;
                 save_data();
                 refresh_game_table();
@@ -397,6 +398,11 @@ namespace Tavleya2
                 PlayerslistView.Items[first].Selected = true;
                 PlayerslistView.Items[second].Selected = true;
                 PlayerslistView.Focus();
+            }
+            else
+            {
+                up_button.Enabled = false;
+                down_button.Enabled = false;
             }
         }
         //end game table
@@ -532,6 +538,46 @@ namespace Tavleya2
             allowed_next = true;
             System_count_btn.Visible = false;
             Nextbutton.Enabled = true;
+        }
+
+        private void up_button_Click(object sender, EventArgs e)
+        {
+            if (PlayerslistView.SelectedIndices.Count > 0)
+            {
+                int index = PlayerslistView.SelectedIndices[0];
+                if (index != 0)
+                {
+                    player tmppl = tvlData.players[index];
+                    tvlData.players[index] = tvlData.players[index - 1];
+                    tvlData.players[index - 1] = tmppl;
+                }
+                Refresh_playerstable();
+            }
+        }
+
+        private void down_button_Click(object sender, EventArgs e)
+        {
+            if (PlayerslistView.SelectedIndices.Count > 0)
+            {
+                int index = PlayerslistView.SelectedIndices[0];
+                if (index != (tvlData.players.Count - 1))
+                {
+                    player tmppl = tvlData.players[index];
+                    tvlData.players[index] = tvlData.players[index + 1];
+                    tvlData.players[index + 1] = tmppl;
+                }
+                Refresh_playerstable();
+            }
+        }
+
+        private void Del_button_Click(object sender, EventArgs e)
+        {
+            if (PlayerslistView.SelectedIndices.Count > 0)
+            {
+                foreach (int i in PlayerslistView.SelectedIndices)
+                    tvlData.players.RemoveAt(i);
+                Refresh_playerstable();
+            }
         }
     }
 }
